@@ -8,18 +8,24 @@
   crossorigin="anonymous"></script>
         <script src="main.js"></script>
         <script>
-            function initHide(){
+            document.ready(function initHide(){
                 $('.heart').hide();
                 $('.brain').hide();
                 $('.stats').hide();
                 $('.eyes').hide();
 
-            }
+            });
         </script>
     </head>
-    <body onload="javascript:initHide();">
+    <body>
         <p>Breaths: <span class="breaths">0</span></p>
         <div class="button"><a href="javascript:breathe();">breathe</a></div>
+        <div class="stats">
+            <p>Age: <span class="age">0</span></p>
+            <p>Happiness: <span class="happ">100</span></p>
+            <p>Hunger: <span class="hunger">0</span></p>
+            <p>Knowledge: <span class="know">0</span></p>
+        </div>
         <div class="heart">
         <p>Beats: <span class="beats">0</span></p>
         <div class="button"><a href="javascript:beat();">heartbeat</a></div>
@@ -29,8 +35,7 @@
         <div class="button"><a href="javascript:think();">think</a></div>
         </div>
         <div class="eyes">
-        <p>Blinks: <span class="blinks">0</span></p>
-        <div class="button"><a href="javascript:blink();">blink</a></div>
+        <br><div class="button">blink</div>
         </div>
     </body>
 </html>
