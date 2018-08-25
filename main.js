@@ -50,6 +50,11 @@ function sleep(){
 	$('.tiredness').html(tiredness);
 }
 
+function laugh(){
+	happiness += 0.05;
+	$('.happ').html(happiness);
+}
+
 function addTurn(){
     age += 0.05; //to be balanced
     $('.age').html(age);
@@ -75,4 +80,8 @@ function addSleep(){
 
 function addStats(){
     $('.stats').show();
+}
+
+function addLaugh(){
+	$('.laugh').show();
 }
