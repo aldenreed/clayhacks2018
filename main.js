@@ -1,6 +1,7 @@
 var breath = 0;
 var beats = 0;
 var thoughts = 0;
+var blinks = 0;
 
 function breathe(){
     breath++;
@@ -26,7 +27,14 @@ function think(){
     $('.thoughts').html(thoughts);
     if(thoughts == 1){
         transformColor();
+        addStats();
     }
+}
+
+function blink(){
+    blinks++;
+    //console.log(blinks);
+    $('.blinks').html(blinks);
 }
 
 function addBeat(){
@@ -35,4 +43,8 @@ function addBeat(){
 
 function addThought(){
     $('.brain').show();
+}
+
+function addStats(){
+    $('.stats').show();
 }
