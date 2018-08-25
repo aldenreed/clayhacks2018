@@ -4,4 +4,6 @@ var thoughts = 0;
 
 function breathe(){
     breath++;
+    console.log(breath);
+    $('.breaths').html(breath);
 }
