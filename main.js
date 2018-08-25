@@ -65,7 +65,7 @@ function cry(){
 }
 
 function eat(){
-    hunger -= 0.05;
+    hunger = Math.max(hunger -= 0.05, 0);
     $('.hunger').html(hunger);
     $('.res').prepend("You cry a bit and Mommy gives you your bottle.</br>");
 }
