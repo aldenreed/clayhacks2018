@@ -6,6 +6,7 @@ var age = 0;
 var happiness = 100;
 var hunger = 0;
 var knowledge = 0;
+var tiredness = 0;
 
 
 function breathe(){
@@ -23,6 +24,7 @@ function beat(){
     $('.beats').html(beats);
     if(beats == 10){
         addThought();
+        addSleep();
     }
 }
 
@@ -32,7 +34,7 @@ function think(){
     //console.log(thoughts);
     $('.thoughts').html(thoughts);
     if(thoughts == 1){
-        //transformColor();
+    	//transformColor();
         addStats();
     }
 }
@@ -43,6 +45,11 @@ function blink(){
     $('.blinks').html(blinks);
 }
 
+function sleep(){
+	tiredness -= 0.05;
+	$('.tiredness').html(tiredness);
+}
+
 function addTurn(){
     age += 0.05; //to be balanced
     $('.age').html(age);
@@ -50,6 +57,8 @@ function addTurn(){
     $('.happ').html(happiness);
     hunger += 0.05;
     $('.hunger').html(hunger);
+    tiredness += 0.05;
+    $('.tiredness').html(tiredness);
 }
 
 function addBeat(){
@@ -58,6 +67,10 @@ function addBeat(){
 
 function addThought(){
     $('.brain').show();
+}
+
+function addSleep(){
+	$('.sleep').show();
 }
 
 function addStats(){
