@@ -24,7 +24,6 @@ function beat(){
     $('.beats').html(beats);
     if(beats == 10){
         addThought();
-        addSleep();
     }
 }
 
@@ -35,7 +34,7 @@ function think(){
     $('.thoughts').html(thoughts);
     if(thoughts == 1){
     	//transformColor();
-        addStats();
+        addContent();
     }
 }
 
@@ -69,10 +68,13 @@ function addThought(){
     $('.brain').show();
 }
 
-function addSleep(){
-	$('.sleep').show();
+function addBaby(){
+	$('.baby').show();
 }
 
-function addStats(){
+function addContent(){
     $('.stats').show();
+    $('.actions').show();
+    $('.results').show();
+    $('.baby').show();
 }
