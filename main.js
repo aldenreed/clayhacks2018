@@ -7,7 +7,6 @@ var happiness = 100;
 var hunger = 0;
 var knowledge = 0;
 var tiredness = 0;
-var babyThoughts = ["who are you?", "are you my mother?", "I'm cold.", "what do those sounds mean?"];
 
 
 function breathe(){
@@ -31,6 +30,8 @@ function beat(){
 function think(){
     thoughts++;
     addTurn();
+	knowledge ++;
+	$('.know').html(knowledge);
     //console.log(thoughts);
     $('.thoughts').html(thoughts);
     if(thoughts == 1){
@@ -55,7 +56,10 @@ function sleep(){
 function laugh(){
 	happiness += 0.05;
 	$('.happ').html(happiness);
-    $('.res').prepend("Your mother rubs your cheek as you giggle. </br>");
+}
+function work(){
+	addTurn();
+    $('.res').prepend("Your mother rubs your cheek as you giggle. </br>"); //TODO: change thought
 }
 
 function cry(){
@@ -77,7 +81,6 @@ function randomThought(age){
         return newthought;
     }
 }
-
 function addTurn(){
     age += 0.05; //to be balanced
     $('.age').html(age);
