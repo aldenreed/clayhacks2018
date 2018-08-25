@@ -32,7 +32,7 @@ function think(){
     //console.log(thoughts);
     $('.thoughts').html(thoughts);
     if(thoughts == 1){
-        transformColor();
+        //transformColor();
         addStats();
     }
 }
