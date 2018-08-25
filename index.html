@@ -8,13 +8,19 @@
   crossorigin="anonymous"></script>
         <script src="main.js"></script>
     </head>
-    <body>
+    <body onload="javascript:initHide();">
         <p>Breaths: <span class="breaths">0</span></p>
         <div class="button"><a href="javascript:breathe();">breathe</a></div>
+        <div class="heart">
         <p>Beats: <span class="beats">0</span></p>
         <div class="button"><a href="javascript:beat();">heartbeat</a></div>
+        </div>
+        <div class="brain">
         <p>Thoughts: <span class="thoughts">0</span></p>
         <div class="button"><a href="javascript:think();">think</a></div>
+        </div>
+        <div class="eyes">
         <br><div class="button">blink</div>
+        </div>
     </body>
 </html>
