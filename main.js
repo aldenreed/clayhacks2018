@@ -45,7 +45,7 @@ function blink(){
 }
 
 function sleep(){
-	tiredness -= 0.05;
+	tiredness = min(tiredness -= 0.05, 0);
 	$('.tiredness').html(tiredness);
 }
 
