@@ -37,7 +37,7 @@ function think(){
     	//transformColor();
         addContent();
     }
-    $('.res').prepend(randomThought("baby"));
+    $('.res').prepend(randomThought("baby") + "</br>");
 }
 
 function blink(){
@@ -47,26 +47,34 @@ function blink(){
 }
 
 function sleep(){
-	tiredness = min(tiredness -= 0.05, 0);
+	tiredness = Math.max(tiredness -= 0.05, 0);
 	$('.tiredness').html(tiredness);
-    $('.res').prepend("You slowly close your eyes and sleep.");
+    $('.res').prepend("You slowly close your eyes and sleep. </br>");
 }
 
 function laugh(){
 	happiness += 0.05;
 	$('.happ').html(happiness);
-    $('.res').prepend("Your mother rubs your cheek as you giggle.");
+    $('.res').prepend("Your mother rubs your cheek as you giggle. </br>");
 }
 
 function cry(){
     happiness -= 0.05;
     $('.happ').html(happiness);
-    $('.res').prepend("You begin to wail. Daddy lifts you into his arms.");
+    $('.res').prepend("You begin to wail. Daddy lifts you into his arms.</br>");
+}
+
+function eat(){
+    hunger -= 0.05;
+    $('.hunger').html(hunger);
+    $('.res').prepend("You cry a bit and Mommy gives you your bottle.</br>");
 }
 
 function randomThought(age){
     if(age == "baby"){
-        return babyThoughts[Math.floor(Math.random() * babyThoughts.length)];
+        newthought = babyThoughts[Math.floor(Math.random() * babyThoughts.length)];
+        //console.log(newthought);
+        return newthought;
     }
 }
 
