@@ -11,7 +11,7 @@ var knowledge = 0;
 function breathe(){
     breath++;
     //console.log(breath);
-    $('.breaths').html(breath);
+    $('.beats').html(breath);
     if(breath == 10){
         addBeat();
     }
