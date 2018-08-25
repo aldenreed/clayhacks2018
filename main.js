@@ -60,3 +60,11 @@ function addThought(){
 function addStats(){
     $('.stats').show();
 }
+
+function initHide(){
+    $('.heart').hide();
+    $('.brain').hide();
+    $('.stats').hide();
+    $('.eyes').hide();
+    
+}

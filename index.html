@@ -7,15 +7,30 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
         <script src="main.js"></script>
+        <script>
+            function initHide(){
+                $('.heart').hide();
+                $('.brain').hide();
+                $('.stats').hide();
+                $('.eyes').hide();
+
+            }
+        </script>
     </head>
-    <body>
+    <body onload="javascript:initHide();">
         <p>Breaths: <span class="breaths">0</span></p>
         <div class="button"><a href="javascript:breathe();">breathe</a></div>
+        <div class="heart">
         <p>Beats: <span class="beats">0</span></p>
         <div class="button"><a href="javascript:beat();">heartbeat</a></div>
+        </div>
+        <div class="brain">
         <p>Thoughts: <span class="thoughts">0</span></p>
         <div class="button"><a href="javascript:think();">think</a></div>
+        </div>
+        <div class="eyes">
         <p>Blinks: <span class="blinks">0</span></p>
         <div class="button"><a href="javascript:blink();">blink</a></div>
+        </div>
     </body>
 </html>
