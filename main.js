@@ -45,13 +45,24 @@ function blink(){
 }
 
 function sleep(){
-	tiredness = min(tiredness -= 0.05, 0);
+	tiredness -= 0.05;
+	if(tiredness < 0){
+		tiredness = 0;
+	}
 	$('.tiredness').html(tiredness);
 }
 
 function laugh(){
 	happiness += 0.05;
 	$('.happ').html(happiness);
+}
+
+function eat(){
+	hunger -= 0.05;
+	if(hunger < 0){
+		hunger = 0;
+	}
+	$('.hunger').html(hunger);
 }
 
 function addTurn(){
