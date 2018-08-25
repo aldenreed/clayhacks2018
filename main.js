@@ -20,7 +20,7 @@ function breathe(){
 function beat(){
     beats++;
     //console.log(beats);
-    $('.breaths').html(beats);
+    $('.beats').html(beats);
     if(beats == 10){
         addThought();
     }
