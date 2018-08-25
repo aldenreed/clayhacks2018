@@ -7,6 +7,7 @@ var happiness = 100;
 var hunger = 0;
 var knowledge = 0;
 var tiredness = 0;
+var babyThoughts = ["who are you?", "are you my mother?", "I'm cold.", "what do those sounds mean?"];
 
 
 function breathe(){
@@ -36,6 +37,7 @@ function think(){
     	//transformColor();
         addContent();
     }
+    $('.res').prepend(randomThought("baby"));
 }
 
 function blink(){
@@ -45,24 +47,27 @@ function blink(){
 }
 
 function sleep(){
-	tiredness -= 0.05;
-	if(tiredness < 0){
-		tiredness = 0;
-	}
+	tiredness = min(tiredness -= 0.05, 0);
 	$('.tiredness').html(tiredness);
+    $('.res').prepend("You slowly close your eyes and sleep.");
 }
 
 function laugh(){
 	happiness += 0.05;
 	$('.happ').html(happiness);
+    $('.res').prepend("Your mother rubs your cheek as you giggle.");
 }
 
-function eat(){
-	hunger -= 0.05;
-	if(hunger < 0){
-		hunger = 0;
-	}
-	$('.hunger').html(hunger);
+function cry(){
+    happiness -= 0.05;
+    $('.happ').html(happiness);
+    $('.res').prepend("You begin to wail. Daddy lifts you into his arms.");
+}
+
+function randomThought(age){
+    if(age == "baby"){
+        return babyThoughts[Math.floor(Math.random() * babyThoughts.length)];
+    }
 }
 
 function addTurn(){
