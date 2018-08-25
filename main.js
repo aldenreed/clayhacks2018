@@ -11,7 +11,7 @@ var knowledge = 0;
 function breathe(){
     breath++;
     //console.log(breath);
-    $('.beats').html(breath);
+    $('.breaths').html(breath);
     if(breath == 10){
         addBeat();
     }
@@ -45,8 +45,11 @@ function blink(){
 
 function addTurn(){
     age += 0.05; //to be balanced
+    $('.age').html(age);
     happiness -= 0.05;
+    $('.happ').html(happiness);
     hunger += 0.05;
+    $('.hunger').html(hunger);
 }
 
 function addBeat(){
@@ -59,12 +62,4 @@ function addThought(){
 
 function addStats(){
     $('.stats').show();
-}
-
-function initHide(){
-    $('.heart').hide();
-    $('.brain').hide();
-    $('.stats').hide();
-    $('.eyes').hide();
-    
 }
